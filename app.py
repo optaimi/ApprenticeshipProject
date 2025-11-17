@@ -1,5 +1,6 @@
 import streamlit as st
 from validation_engine import df, validate_product
+from llm_explanations import generate_explanation
 
 st.set_page_config(page_title="JH Product Validation – Demo", layout="centered")
 
@@ -17,6 +18,7 @@ if submitted:
     if not product_name.strip():
         st.error("Product name is required.")
     else:
+        # Core rules engine
         result = validate_product(product_name, category, float(price), age_flag)
 
         st.subheader("Overall status")
@@ -59,3 +61,25 @@ if submitted:
                     "similarity",
                 ]]
             )
+
+        # ---------- GPT-4.1 nano explanation ----------
+        submission = {
+            "name": product_name,
+            "category": category,
+            "price": float(price),
+            "age_flag": age_flag,
+        }
+
+        use_llm = st.toggle("Generate AI explanation (GPT-4.1 nano)", value=True)
+
+        if use_llm:
+            try:
+                explanation = generate_explanation(submission, result)
+                st.subheader("AI explanation")
+                st.write(explanation)
+            except Exception as e:
+                # Keep this generic for demo
+                st.warning(
+                    "Could not generate AI explanation (check API key / network). "
+                    "Core validation still works."
+                )

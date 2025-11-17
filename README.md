@@ -36,3 +36,12 @@ source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
+
+# GPT-4.1 nano explanations
+If `OPENAI_API_KEY` is set and `openai` is installed, the app can call
+OpenAI's `gpt-4.1-nano` model to generate natural-language explanations
+of the validation output.
+
+- The rules engine in `validation_engine.py` still makes all decisions.
+- `llm_explanations.py` only turns those decisions into human-readable text.
+- If the API is unavailable, the app falls back to the rule-based output.
