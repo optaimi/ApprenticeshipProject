@@ -1,0 +1,603 @@
+{
+  "submissions": [
+    {
+      "id": "1",
+      "timestamp": "2025-11-18T16:08:15.863662",
+      "product": {
+        "product_name": "Coca-Cola",
+        "category": "Soft drinks",
+        "price": 1.8,
+        "age_flag": "No"
+      },
+      "validation": {
+        "category": {
+          "decision": "pass",
+          "predicted": "Soft drinks",
+          "confidence": 1,
+          "message": "Category matches typical HO category 'Soft drinks'."
+        },
+        "price": {
+          "decision": "pass",
+          "median": 1.8,
+          "lower": 1.35,
+          "upper": 2.25,
+          "message": "Price is within \u00b125% of typical HO price (~\u00a31.80)."
+        },
+        "age_verification": {
+          "decision": "pass",
+          "predicted": "No",
+          "confidence": 0.7333333333333334,
+          "message": "Age verification setting matches typical HO pattern ('No')."
+        },
+        "overall": "Ready for automatic approval.",
+        "neighbours": [
+          {
+            "ProductName": "Coca-Cola 1L",
+            "Category": "Soft drinks",
+            "PriceGBP": 1.21,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.7802522173791615
+          },
+          {
+            "ProductName": "Coca-Cola 1L",
+            "Category": "Soft drinks",
+            "PriceGBP": 2.1,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.7802522173791615
+          },
+          {
+            "ProductName": "Coca-Cola 330ml",
+            "Category": "Soft drinks",
+            "PriceGBP": 2.4,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.7435975124849281
+          },
+          {
+            "ProductName": "Coca-Cola 1.5L",
+            "Category": "Soft drinks",
+            "PriceGBP": 2.03,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.7435192800808669
+          },
+          {
+            "ProductName": "Coca-Cola 1.5L",
+            "Category": "Soft drinks",
+            "PriceGBP": 1.85,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.7435192800808669
+          },
+          {
+            "ProductName": "Coca-Cola 2L",
+            "Category": "Soft drinks",
+            "PriceGBP": 1.29,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.7235955404071936
+          },
+          {
+            "ProductName": "Frozen Mixed Vegetables 500g",
+            "Category": "Frozen food",
+            "PriceGBP": 2.13,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Carling Lager 440ml",
+            "Category": "Alcohol",
+            "PriceGBP": 1.76,
+            "AgeVerificationRequired": "Yes",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Hot Chocolate Powder 200g",
+            "Category": "Hot drinks",
+            "PriceGBP": 1.75,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Red Bull 1L",
+            "Category": "Soft drinks",
+            "PriceGBP": 2.32,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Tetley Tea Bags 80s",
+            "Category": "Hot drinks",
+            "PriceGBP": 2.94,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Carling Lager 1L",
+            "Category": "Alcohol",
+            "PriceGBP": 1.8,
+            "AgeVerificationRequired": "Yes",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Kinder Bueno Bar 45g",
+            "Category": "Confectionery",
+            "PriceGBP": 0.94,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Sprite 1L",
+            "Category": "Soft drinks",
+            "PriceGBP": 0.87,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Frozen Chips 750g",
+            "Category": "Frozen food",
+            "PriceGBP": 1.49,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          }
+        ]
+      },
+      "accepted_changes": [],
+      "notes": null,
+      "status": "approved",
+      "flagged": false
+    },
+    {
+      "id": "2",
+      "timestamp": "2025-11-18T16:23:31.613872",
+      "product": {
+        "product_name": "Chicago Town Pizza",
+        "category": "Frozen food",
+        "price": 2.13,
+        "age_flag": "No"
+      },
+      "validation": {
+        "category": {
+          "decision": "pass",
+          "predicted": "Frozen food",
+          "confidence": 1,
+          "message": "Category matches typical HO category 'Frozen food'."
+        },
+        "price": {
+          "decision": "hard_stop",
+          "median": 2.13,
+          "lower": 1.5975,
+          "upper": 2.6624999999999996,
+          "message": "Price is an extreme outlier (1543% from typical ~\u00a32.13). Please check and correct before submitting."
+        },
+        "age_verification": {
+          "decision": "pass",
+          "predicted": "No",
+          "confidence": 0.8666666666666667,
+          "message": "Age verification setting matches typical HO pattern ('No')."
+        },
+        "overall": "Requires correction before submission.",
+        "neighbours": [
+          {
+            "ProductName": "Frozen Margherita Pizza 300g",
+            "Category": "Frozen food",
+            "PriceGBP": 3.29,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3773677046789827
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 300g",
+            "Category": "Frozen food",
+            "PriceGBP": 2.26,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3773677046789827
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 750g",
+            "Category": "Frozen food",
+            "PriceGBP": 2.3,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3769184103818385
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 1kg",
+            "Category": "Frozen food",
+            "PriceGBP": 1.69,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3689252886356341
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 1kg",
+            "Category": "Frozen food",
+            "PriceGBP": 1.69,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3689252886356341
+          },
+          {
+            "ProductName": "Frozen Pepperoni Pizza 750g",
+            "Category": "Frozen food",
+            "PriceGBP": 3.92,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3498262977886155
+          },
+          {
+            "ProductName": "Frozen Pepperoni Pizza 750g",
+            "Category": "Frozen food",
+            "PriceGBP": 3.61,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3498262977886155
+          },
+          {
+            "ProductName": "Frozen Mixed Vegetables 500g",
+            "Category": "Frozen food",
+            "PriceGBP": 2.13,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Hot Chocolate Powder 200g",
+            "Category": "Hot drinks",
+            "PriceGBP": 1.75,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Red Bull 1L",
+            "Category": "Soft drinks",
+            "PriceGBP": 2.32,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Coca-Cola 2L",
+            "Category": "Soft drinks",
+            "PriceGBP": 1.29,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Carling Lager 1L",
+            "Category": "Alcohol",
+            "PriceGBP": 1.8,
+            "AgeVerificationRequired": "Yes",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Kinder Bueno Bar 45g",
+            "Category": "Confectionery",
+            "PriceGBP": 0.94,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Sprite 1L",
+            "Category": "Soft drinks",
+            "PriceGBP": 0.87,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Tetley Tea Bags 80s",
+            "Category": "Hot drinks",
+            "PriceGBP": 2.94,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          }
+        ]
+      },
+      "accepted_changes": [
+        {
+          "field": "price",
+          "accepted": true,
+          "originalValue": 35,
+          "suggestedValue": 2.13
+        }
+      ],
+      "notes": "",
+      "status": "approved",
+      "flagged": true
+    },
+    {
+      "id": "3",
+      "timestamp": "2025-11-18T16:25:09.335800",
+      "product": {
+        "product_name": "Chicago Town Pizza",
+        "category": "Frozen food",
+        "price": 12.5,
+        "age_flag": "No"
+      },
+      "validation": {
+        "category": {
+          "decision": "warning",
+          "predicted": "Frozen food",
+          "confidence": 1,
+          "message": "Most similar HO products are in category 'Frozen food' (confidence 100%). Consider updating."
+        },
+        "price": {
+          "decision": "hard_stop",
+          "median": 2.13,
+          "lower": 1.5975,
+          "upper": 2.6624999999999996,
+          "message": "Price is an extreme outlier (487% from typical ~\u00a32.13). Please check and correct before submitting."
+        },
+        "age_verification": {
+          "decision": "warning",
+          "predicted": "No",
+          "confidence": 0.8666666666666667,
+          "message": "Most similar HO products use age verification 'No'. Submission will be flagged for review."
+        },
+        "overall": "Requires correction before submission.",
+        "neighbours": [
+          {
+            "ProductName": "Frozen Margherita Pizza 300g",
+            "Category": "Frozen food",
+            "PriceGBP": 3.29,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3773677046789827
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 300g",
+            "Category": "Frozen food",
+            "PriceGBP": 2.26,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3773677046789827
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 750g",
+            "Category": "Frozen food",
+            "PriceGBP": 2.3,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3769184103818385
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 1kg",
+            "Category": "Frozen food",
+            "PriceGBP": 1.69,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3689252886356341
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 1kg",
+            "Category": "Frozen food",
+            "PriceGBP": 1.69,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3689252886356341
+          },
+          {
+            "ProductName": "Frozen Pepperoni Pizza 750g",
+            "Category": "Frozen food",
+            "PriceGBP": 3.92,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3498262977886155
+          },
+          {
+            "ProductName": "Frozen Pepperoni Pizza 750g",
+            "Category": "Frozen food",
+            "PriceGBP": 3.61,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3498262977886155
+          },
+          {
+            "ProductName": "Frozen Mixed Vegetables 500g",
+            "Category": "Frozen food",
+            "PriceGBP": 2.13,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Hot Chocolate Powder 200g",
+            "Category": "Hot drinks",
+            "PriceGBP": 1.75,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Red Bull 1L",
+            "Category": "Soft drinks",
+            "PriceGBP": 2.32,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Coca-Cola 2L",
+            "Category": "Soft drinks",
+            "PriceGBP": 1.29,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Carling Lager 1L",
+            "Category": "Alcohol",
+            "PriceGBP": 1.8,
+            "AgeVerificationRequired": "Yes",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Kinder Bueno Bar 45g",
+            "Category": "Confectionery",
+            "PriceGBP": 0.94,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Sprite 1L",
+            "Category": "Soft drinks",
+            "PriceGBP": 0.87,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Tetley Tea Bags 80s",
+            "Category": "Hot drinks",
+            "PriceGBP": 2.94,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          }
+        ]
+      },
+      "accepted_changes": [
+        {
+          "field": "category",
+          "accepted": true,
+          "originalValue": "Alcohol",
+          "suggestedValue": "Frozen food"
+        },
+        {
+          "field": "age_flag",
+          "accepted": true,
+          "originalValue": "Yes",
+          "suggestedValue": "No"
+        }
+      ],
+      "notes": "I don't care",
+      "status": "denied",
+      "flagged": true
+    },
+    {
+      "id": "4",
+      "timestamp": "2025-11-18T16:25:38.662479",
+      "product": {
+        "product_name": "Chicago Town Pizza",
+        "category": "Frozen food",
+        "price": 2.13,
+        "age_flag": "No"
+      },
+      "validation": {
+        "category": {
+          "decision": "warning",
+          "predicted": "Frozen food",
+          "confidence": 1,
+          "message": "Most similar HO products are in category 'Frozen food' (confidence 100%). Consider updating."
+        },
+        "price": {
+          "decision": "pass",
+          "median": 2.13,
+          "lower": 1.5975,
+          "upper": 2.6624999999999996,
+          "message": "Price is within \u00b125% of typical HO price (~\u00a32.13)."
+        },
+        "age_verification": {
+          "decision": "pass",
+          "predicted": "No",
+          "confidence": 0.8666666666666667,
+          "message": "Age verification setting matches typical HO pattern ('No')."
+        },
+        "overall": "Submitted with warnings; HO will review.",
+        "neighbours": [
+          {
+            "ProductName": "Frozen Margherita Pizza 300g",
+            "Category": "Frozen food",
+            "PriceGBP": 3.29,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3773677046789827
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 300g",
+            "Category": "Frozen food",
+            "PriceGBP": 2.26,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3773677046789827
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 750g",
+            "Category": "Frozen food",
+            "PriceGBP": 2.3,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3769184103818385
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 1kg",
+            "Category": "Frozen food",
+            "PriceGBP": 1.69,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3689252886356341
+          },
+          {
+            "ProductName": "Frozen Margherita Pizza 1kg",
+            "Category": "Frozen food",
+            "PriceGBP": 1.69,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3689252886356341
+          },
+          {
+            "ProductName": "Frozen Pepperoni Pizza 750g",
+            "Category": "Frozen food",
+            "PriceGBP": 3.92,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3498262977886155
+          },
+          {
+            "ProductName": "Frozen Pepperoni Pizza 750g",
+            "Category": "Frozen food",
+            "PriceGBP": 3.61,
+            "AgeVerificationRequired": "No",
+            "similarity": 0.3498262977886155
+          },
+          {
+            "ProductName": "Frozen Mixed Vegetables 500g",
+            "Category": "Frozen food",
+            "PriceGBP": 2.13,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Hot Chocolate Powder 200g",
+            "Category": "Hot drinks",
+            "PriceGBP": 1.75,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Red Bull 1L",
+            "Category": "Soft drinks",
+            "PriceGBP": 2.32,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Coca-Cola 2L",
+            "Category": "Soft drinks",
+            "PriceGBP": 1.29,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Carling Lager 1L",
+            "Category": "Alcohol",
+            "PriceGBP": 1.8,
+            "AgeVerificationRequired": "Yes",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Kinder Bueno Bar 45g",
+            "Category": "Confectionery",
+            "PriceGBP": 0.94,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Sprite 1L",
+            "Category": "Soft drinks",
+            "PriceGBP": 0.87,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          },
+          {
+            "ProductName": "Tetley Tea Bags 80s",
+            "Category": "Hot drinks",
+            "PriceGBP": 2.94,
+            "AgeVerificationRequired": "No",
+            "similarity": 0
+          }
+        ]
+      },
+      "accepted_changes": [
+        {
+          "field": "category",
+          "accepted": true,
+          "originalValue": "Confectionery",
+          "suggestedValue": "Frozen food"
+        }
+      ],
+      "notes": "",
+      "status": "approved",
+      "flagged": true
+    }
+  ]
+}
