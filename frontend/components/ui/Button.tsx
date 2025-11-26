@@ -1,10 +1,11 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, HTMLMotionProps } from 'framer-motion'
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+// Fix: Extend HTMLMotionProps<"button"> instead of React.ButtonHTMLAttributes
+// This resolves the conflict with onAnimationStart and other motion props
+export interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: 'primary' | 'secondary' | 'danger'
   size?: 'sm' | 'md' | 'lg'
   loading?: boolean
