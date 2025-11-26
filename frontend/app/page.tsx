@@ -157,17 +157,17 @@ export default function Home() {
     )
   }
 
-  const hasHardStops = validation ? ['category', 'price', 'age_verification'].some(
-    (key) =>
-      validation[key as keyof ValidationResult]?.decision === 'hard_stop'
-  ) : false
+  const hasHardStops = validation
+  ? validation.category.decision === 'hard_stop' ||
+    validation.price.decision === 'hard_stop' ||
+    validation.age_verification.decision === 'hard_stop'
+  : false
 
-  const hasWarnings = validation
-    ? ['category', 'price', 'age_verification'].some(
-        (key) =>
-          validation[key as keyof ValidationResult]?.decision === 'warning'
-      )
-    : false
+const hasWarnings = validation
+  ? validation.category.decision === 'warning' ||
+    validation.price.decision === 'warning' ||
+    validation.age_verification.decision === 'warning'
+  : false
 
   const hasRejectedSuggestions = acceptedChanges.some((c) => !c.accepted)
 
