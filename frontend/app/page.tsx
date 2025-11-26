@@ -139,7 +139,9 @@ export default function Home() {
         shouldValidate: true,
         shouldDirty: true,
       })
-    } else if (field === 'price' && validation?.price.median !== null) {
+    // We check 'validation &&' first to ensure it exists      
+    } else if (field === 'price' && validation && validation.price.median !== null) {
+    // Using 'validation!' to tell TypeScript it's there
       setValue('price', String(validation.price.median), {
         shouldValidate: true,
         shouldDirty: true,
