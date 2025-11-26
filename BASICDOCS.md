@@ -1,7 +1,3 @@
-# WARP.md
-
-This file provides guidance to WARP (warp.dev) when working with code in this repository.
-
 ## Overview
 
 This repo is a small demo app for validating store-submitted products against a head office (HO) product file. It consists of:

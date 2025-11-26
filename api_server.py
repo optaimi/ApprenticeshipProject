@@ -2,17 +2,24 @@
 FastAPI wrapper for the validation engine.
 Provides REST endpoints for the Next.js frontend.
 """
-
+import os  
 import json
 from datetime import datetime
 from typing import Optional
 from pathlib import Path
 
+from google.cloud import storage 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from validation_engine import validate_product, df
+
+# Storage Configuration
+APP_ENV = os.getenv("APP_ENV", "local") # Defaults to 'local' if not set
+GCS_BUCKET_NAME = os.getenv("GCS_BUCKET_NAME") # To be updated from Google Cloud
+DATA_FILENAME = "submissions.json"
+
 
 # ===== Data Models =====
 
@@ -77,28 +84,79 @@ next_submission_id = 1
 
 
 def load_submissions_from_file():
-    """Load submissions from JSON file if it exists."""
+    """Load submissions from Local File or Google Cloud Storage."""
     global submissions, next_submission_id
-    submissions_file = Path("submissions.json")
-    if submissions_file.exists():
+    
+    data = None
+
+    if APP_ENV == "cloud":
+        # --- CLOUD MODE ---
         try:
-            with open(submissions_file, "r") as f:
-                data = json.load(f)
-                submissions = {sub["id"]: sub for sub in data.get("submissions", [])}
-                next_submission_id = max([int(sub["id"]) for sub in submissions.values()] or [0]) + 1
-        except Exception:
-            submissions = {}
+            client = storage.Client()
+            bucket = client.bucket(GCS_BUCKET_NAME)
+            blob = bucket.blob(DATA_FILENAME)
+            
+            if blob.exists():
+                json_data = blob.download_as_text()
+                data = json.loads(json_data)
+                print(f"Loaded data from GCS bucket: {GCS_BUCKET_NAME}")
+            else:
+                print("No data file found in GCS, starting fresh.")
+                data = {"submissions": []}
+        except Exception as e:
+            print(f"Error loading from GCS: {e}")
+            data = {"submissions": []}
+            
+    else:
+        # --- LOCAL MODE ---
+        submissions_file = Path(DATA_FILENAME)
+        if submissions_file.exists():
+            try:
+                with open(submissions_file, "r") as f:
+                    data = json.load(f)
+                    print("Loaded data from local file.")
+            except Exception:
+                data = {"submissions": []}
+
+    # Process the loaded data (same for both modes)
+    if data:
+        submissions = {sub["id"]: sub for sub in data.get("submissions", [])}
+        # Calculate next ID safely
+        if submissions:
+            ids = [int(sub["id"]) for sub in submissions.values() if str(sub["id"]).isdigit()]
+            next_submission_id = max(ids) + 1 if ids else 1
+        else:
             next_submission_id = 1
 
 
 def save_submissions_to_file():
-    """Persist submissions to JSON file."""
-    submissions_file = Path("submissions.json")
-    try:
-        with open(submissions_file, "w") as f:
-            json.dump({"submissions": list(submissions.values())}, f, indent=2)
-    except Exception as e:
-        print(f"Error saving submissions: {e}")
+    """Persist submissions to Local File or Google Cloud Storage."""
+    data_to_save = {"submissions": list(submissions.values())}
+    
+    if APP_ENV == "cloud":
+        # --- CLOUD MODE ---
+        try:
+            client = storage.Client()
+            bucket = client.bucket(GCS_BUCKET_NAME)
+            blob = bucket.blob(DATA_FILENAME)
+            
+            blob.upload_from_string(
+                json.dumps(data_to_save, indent=2),
+                content_type='application/json'
+            )
+            print(f"Saved to GCS bucket: {GCS_BUCKET_NAME}")
+        except Exception as e:
+            print(f"Error saving to GCS: {e}")
+            
+    else:
+        # --- LOCAL MODE ---
+        submissions_file = Path(DATA_FILENAME)
+        try:
+            with open(submissions_file, "w") as f:
+                json.dump(data_to_save, f, indent=2)
+            print("Saved to local file.")
+        except Exception as e:
+            print(f"Error saving locally: {e}")
 
 
 # ===== FastAPI App =====

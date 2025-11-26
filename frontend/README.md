@@ -36,6 +36,11 @@ A modern Next.js 14+ frontend for the Product Validation System built with TypeS
 
 ### 1. Install Dependencies
 
+powershell.exe -ExecutionPolicy Bypass
+
+
+$env:Path = "$HOME\nodejs;" + $env:Path  
+
 ```bash
 cd frontend
 npm install

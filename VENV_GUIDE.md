@@ -1,8 +1,6 @@
 # Python Virtual Environment (venv) Guide
 
-This guide helps you set up and manage the Python virtual environment for the Product Validation System.
-
-## What is a Virtual Environment?
+## Why use a Virtual Environment?
 
 A virtual environment is an isolated Python installation on your machine. It allows you to:
 - Install project dependencies without affecting your system Python
@@ -237,16 +235,3 @@ Don't want to manually create venv? Use the automated setup script:
 ```
 
 This does all the venv setup automatically!
-
-## More Information
-
-- Official venv documentation: https://docs.python.org/3/tutorial/venv.html
-- Python download: https://www.python.org/downloads/
-- Pip documentation: https://pip.pypa.io/
-
----
-
-**Summary**: Always activate venv before working with Python packages!
-
-✅ `(.venv)` in prompt = Ready to go  
-❌ No `(.venv)` = Activate first with `.venv\Scripts\Activate.ps1`
