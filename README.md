@@ -173,4 +173,5 @@ npm run dev
 
 This project is currently a **Proof of Concept**. We are actively tracking known limitations (such as the lack of authentication and use of local storage) and have a clear roadmap for the move to production.
 
-👉 **[View the full Development Log & Roadmap here](DEVELOPMENT_LOG.md)**
+* 👉 **[View the Development Log & Bug Tracker](DEVELOPMENT_LOG.md)**
+* 👉 **[Read the Production Feature Specification](docs/PRODUCTION_SPEC.md)**
