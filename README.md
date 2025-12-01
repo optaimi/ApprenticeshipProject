@@ -169,3 +169,8 @@ npm run dev
     ├── public/                    # Static assets
     └── package.json               # Frontend dependencies
 ```
+## 🚧 Project Status & Roadmap
+
+This project is currently a **Proof of Concept**. We are actively tracking known limitations (such as the lack of authentication and use of local storage) and have a clear roadmap for the move to production.
+
+👉 **[View the full Development Log & Roadmap here](DEVELOPMENT_LOG.md)**
