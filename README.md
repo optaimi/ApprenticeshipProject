@@ -8,6 +8,16 @@ This system replaces manual spot-checks with an intelligent, real-time validatio
 
 -----
 
+## ⚠️ Project Context (Proof of Concept)
+
+This application is currently a **Proof of Concept (PoC)** designed to demonstrate the validation logic and user workflow. 
+
+**Current Limitations vs. Live Implementation:**
+* **Data Source:** Currently uses a static CSV (`ho_products_dummy_200.csv`) and local JSON file for storage. A production version would integrate directly with company APIs for real-time stock checks and submissions.
+* **Authentication:** The Head Office dashboard is currently open for demonstration purposes. A live version would implement strict Role-Based Access Control (RBAC).
+* **Scalability:** The current in-memory validation engine is optimized for this demo; the production build would utilize a scalable vector database for similarity matching.
+-----
+
 ## 🔍 Key Features
 
 ### For Store Users (Data Entry)
